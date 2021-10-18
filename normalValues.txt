@@ -1,0 +1,2 @@
+normal1,normal2,normal3
+75,200,120
