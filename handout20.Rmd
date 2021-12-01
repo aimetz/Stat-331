@@ -1,0 +1,36 @@
+---
+title: "Handout 20"
+author: "Aiden Metz"
+date: "12/1/2021"
+output: html_notebook
+---
+
+```{r}
+size <- 69
+x <- runif(n=size, min = 0, max = 143)
+y <- 26 + .96*x + rnorm(n=size, mean=0, sd=16)
+```
+
+```{r}
+plot(x, y)
+```
+
+
+```{r}
+lm(y~x)
+```
+
+
+```{r}
+plot(x, lm(y~x)$residuals)
+```
+
+```{r}
+qqnorm(lm(y~x)$residuals)
+```
+
+
+```{r}
+shapiro.test(lm(y~x)$residuals)
+```
+
